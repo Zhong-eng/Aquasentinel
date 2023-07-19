@@ -81,13 +81,13 @@ def run_live():
         # print("Camera issues")
 
 
-run_live()
+# run_live()
 
 
 
 app = Flask(__name__)
 
-UPLOAD_FOLDER = '../static/assets/img'
+UPLOAD_FOLDER = 'static/assets/img'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -112,5 +112,5 @@ def demo():
     return render_template("demo.html")
 
 #
-# if __name__ == "__main__":
-#     app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=True)

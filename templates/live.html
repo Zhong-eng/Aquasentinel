@@ -29,9 +29,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navb ar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="/" style='color: black'>Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="/project/" style='color: black'>Project</a></li>
-                <li class="nav-item"><a class="nav-link" href="/aboutus/" style='color: black'>About us</a></li>
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/project/">Project</a></li>
+                <li class="nav-item"><a class="nav-link" href="/live_demo/">Live Demo</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about_us/">About us</a></li>
             </ul>
         </div>
     </div>
@@ -41,14 +42,18 @@
     <div class="container px-4 px-lg-5">
         <!-- Featured Project Row-->
         <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-            <div class="col-xl-8 col-lg-7"><img src="{{ url_for('video') }}" width="50%" class="img-fluid mb-3 mb-lg-0"
-                                                alt="..."/></div>
+                <div class="container">
+        <div class="row">
+            <div class="col-lg-8  offset-lg-2">
+                <h3 class="mt-5">Live Streaming</h3>
+                <img src="{{ url_for('video_feed') }}" alt="Camera not Found. Please reload and try again." width="50%">
+            </div>
+        </div>
+    </div>
             <div class="col-xl-4 col-lg-5">
                 <div class="featured-text text-center text-lg-left">
-                    <h4>Shoreline</h4>
-                    <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use it
-                        for any project - even commercial projects! Download it, customize it, and publish your
-                        website!</p>
+                    <h4>A Live Demonstration</h4>
+                    <p class="text-black-50 mb-0">Check if you yourself are safe, or in a dangerous situation.</p>
                 </div>
             </div>
         </div>

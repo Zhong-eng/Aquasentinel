@@ -62,7 +62,7 @@ def run_model(img):
     plt.axis("off")
     # plt.legend()
     plt.imshow(img)
-    # plt.savefig("../static/assets/results/frame.png")
+    plt.savefig("static/assets/results/frame.png")
     return img
 
 def run_live():
@@ -78,3 +78,4 @@ def run_live():
         # else:
         #     break
         # print("Camera issues")
+
