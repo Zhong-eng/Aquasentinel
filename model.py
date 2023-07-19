@@ -1,7 +1,7 @@
 import yolov5
 import cv2
-import mediapipe as mp
-from skimage import io
+# import mediapipe as mp
+# from skimage import io
 import matplotlib.pyplot as plt
 from flask import Flask, render_template, request, Response, redirect
 from utils import get_base_url
@@ -67,7 +67,7 @@ def run_model(img):
 
 def run_live():
     camera = cv2.VideoCapture(0)  # Set camera
-    mpDraw = mp.solutions.drawing_utils  # Set draw function
+    # mpDraw = mp.solutions.drawing_utils  # Set draw function
     while True:
         success, img = camera.read()
         img = run_model(img)

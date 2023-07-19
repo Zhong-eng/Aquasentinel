@@ -23,7 +23,10 @@ def gen_frames():
 
 @app.route('/')
 def video_feed():
-    return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
+    if  camera.isOpened():
+        return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
+    else:
+        return render_template('demo.html')
 
 
 if __name__ == "__main__":
