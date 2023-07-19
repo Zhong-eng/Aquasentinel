@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--    <form action="/" method="post" enctype="multipart/form-data">-->
+<!--        <input type="file" name='file'>-->
+<!--        <input type="submit">-->
+<!--    </form>-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8  offset-lg-2">
+                <h3 class="mt-5">Live Streaming</h3>
+                <img src="{{ url_for('video_feed') }}" alt="Camera not Found. Please reload and try again." width="50%">
+            </div>
+        </div>
+    </div>
+<!--    <form action="/DetectorResult" method="post" enctype="multipart/form-data">-->
+<!--              <input type="file" id="imageUpload" name="file" accept="image/*" required style="display: none;">-->
+<!--              <button type="button" id="uploadImageButton" class="btn btn-primary btn-xl text-uppercase">Upload Another Image</button>-->
+<!--              <input type="submit" id="getresultButton" value="Get Result" class="btn btn-primary btn-xl text-uppercase" style="display: none;">-->
+<!--    </form>-->
+</body>
+</html>
