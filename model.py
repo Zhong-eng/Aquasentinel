@@ -24,40 +24,41 @@ def run_model(img):
     results = model(img)
 
     for box in results.xyxy[0]:
-        if box[5] == 0:
-            print(box)
-            xB = int(box[2])
-            xA = int(box[0])
-            yB = int(box[3])
-            yA = int(box[1])
-            cv2.rectangle(img, (xA, yA), (xB, yB), (255, 255, 255), 2)
-            cv2.putText(img, 'Active Drowning', (xA, yA - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (36, 255, 12),
-                        2)
-        elif box[5] == 1:
-            print(box)
-            xB = int(box[2])
-            xA = int(box[0])
-            yB = int(box[3])
-            yA = int(box[1])
-            cv2.rectangle(img, (xA, yA), (xB, yB), (0, 0, 255), 2)
-            cv2.putText(img, 'Possible Passive Drowner', (xA, yA - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (36, 255, 12),
-                        2)
-        if box[5] == 2:
-            print(box)
-            xB = int(box[2])
-            xA = int(box[0])
-            yB = int(box[3])
-            yA = int(box[1])
-            cv2.rectangle(img, (xA, yA), (xB, yB), (0, 0, 0), 2)
-            cv2.putText(img, 'Running', (xA, yA - 10), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
-        elif box[5] == 3:
-            print(box)
-            xB = int(box[2])
-            xA = int(box[0])
-            yB = int(box[3])
-            yA = int(box[1])
-            cv2.rectangle(img, (xA, yA), (xB, yB), (155, 95, 255), 2)
-            cv2.putText(img, 'Safe', (xA, yA - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (36, 255, 12), 2)
+        if box[4] >= 0.15:
+            if box[5] == 0:
+                print(box)
+                xB = int(box[2])
+                xA = int(box[0])
+                yB = int(box[3])
+                yA = int(box[1])
+                cv2.rectangle(img, (xA, yA), (xB, yB), (255, 255, 255), 2)
+                cv2.putText(img, 'Active Drowning', (xA, yA - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (36, 255, 12),
+                            2)
+            elif box[5] == 1:
+                print(box)
+                xB = int(box[2])
+                xA = int(box[0])
+                yB = int(box[3])
+                yA = int(box[1])
+                cv2.rectangle(img, (xA, yA), (xB, yB), (0, 0, 255), 2)
+                cv2.putText(img, 'Possible Passive Drowner', (xA, yA - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (36, 255, 12),
+                            2)
+            if box[5] == 2:
+                print(box)
+                xB = int(box[2])
+                xA = int(box[0])
+                yB = int(box[3])
+                yA = int(box[1])
+                cv2.rectangle(img, (xA, yA), (xB, yB), (0, 0, 0), 2)
+                cv2.putText(img, 'Running', (xA, yA - 10), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
+        # elif box[5] == 3:
+        #     print(box)
+        #     xB = int(box[2])
+        #     xA = int(box[0])
+        #     yB = int(box[3])
+        #     yA = int(box[1])
+        #     cv2.rectangle(img, (xA, yA), (xB, yB), (155, 95, 255), 2)
+        #     cv2.putText(img, 'Safe', (xA, yA - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (36, 255, 12), 2)
 
     plt.axis("off")
     # plt.legend()
