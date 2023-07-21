@@ -7,6 +7,8 @@
 // Scripts
 //
 
+
+
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
@@ -34,7 +36,7 @@ window.addEventListener('DOMContentLoaded', event => {
     if (mainNav) {
         new bootstrap.ScrollSpy(document.body, {
             target: '#mainNav',
-            rootMargin: '0px 0px -40%',
+            rootMargin: '0px 0px -100%',
         });
     };
 
